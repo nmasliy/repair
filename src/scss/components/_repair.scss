@@ -1,0 +1,72 @@
+.repair {
+  padding-top: 50px;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__slider {
+    overflow: visible;
+    min-height: 480px;
+  }
+
+  &__item {
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 35px;
+    width: 255px;
+    min-height: 365px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 25%);
+    background: #fff;
+
+    ul {
+      padding-top: 0;
+      height: 0;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 1.15;
+      opacity: 0;
+      transition: $transition;
+    }
+
+    li {
+      @include mb(10px);
+
+      position: relative;
+      padding-left: 40px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background: url("../img/check-icon.svg") left no-repeat;
+        background-size: 22px;
+      }
+    }
+
+    @include hover {
+      ul {
+        padding-top: 24px;
+        height: auto;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__img {
+    margin-bottom: 40px;
+
+    img {
+      display: flex;
+    }
+  }
+
+  &__name {
+    font-size: 24px;
+    text-align: center;
+  }
+}

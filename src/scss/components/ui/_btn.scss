@@ -1,0 +1,35 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 20px 30px;
+  font: inherit;
+  font-size: 24px;
+  line-height: normal;
+  text-align: center;
+  color: #fff;
+  background: $accent-gradient;
+  transition: $transition;
+  cursor: pointer;
+
+  path {
+    transition: fill $transition;
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+
+  @include hover {
+    border-color: $accent-color;
+    color: $accent-color;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 80%) 0%, rgba(255, 255, 255, 45.6%) 100%), #fff;
+
+    path {
+      fill: $accent-color;
+    }
+  }
+}

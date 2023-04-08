@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+@include('html/head.html')
+<style>
+	body {
+		padding: 50px 20px;
+		font-size: 22px;
+		min-height: 100vh;
+	}
+
+	.wrap li {
+		margin: 5px 0;
+	}
+
+	.wrap a,
+	.wrap button {
+		padding: 12px;
+		display: block;
+	}
+
+	.wrap h1 {
+		font-size: 28px;
+		font-weight: 700;
+		margin: 15px 0;
+	}
+</style>
+
+<body>
+
+	<div class="wrap">
+		<h1>Страницы:</h1>
+		<ul>
+			<li><a href="index.html" target="_blank">Главная</a></li>
+		</ul>
+	</div>
+
+	@include('html/modals.html')
+	<script src="js/main.js"></script>
+</body>
+
+</html>

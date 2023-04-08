@@ -1,0 +1,56 @@
+.hero {
+  padding: 100px 0 85px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 20%) 85.42%, rgba(255, 255, 255, 0%) 135.95%), #1a1a18;
+
+  &__inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__content {
+    margin-right: 30px;
+    max-width: 424px;
+    color: #fff;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  &__list {
+    margin-bottom: 20px;
+
+    li {
+      @include mb(25px);
+
+      position: relative;
+      padding-left: 50px;
+      font-weight: 300;
+      font-size: 24px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 35px;
+        height: 35px;
+        background: url("../img/check-icon.svg") center left no-repeat;
+      }
+    }
+  }
+
+  &__caption {
+    margin-bottom: 30px;
+    font-size: 42px;
+    line-height: 1.2;
+  }
+
+  &__img {
+    img {
+      width: 611px;
+    }
+  }
+}

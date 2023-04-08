@@ -1,0 +1,38 @@
+.why {
+  padding: 30px 0 60px;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    max-width: 760px;
+  }
+
+  &__item {
+    @include mb(40px);
+
+    display: flex;
+  }
+
+  &__icon {
+    display: flex;
+    margin-right: 40px;
+    width: 100px;
+  }
+
+  &__info {
+    color: #000;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 18px;
+  }
+}
