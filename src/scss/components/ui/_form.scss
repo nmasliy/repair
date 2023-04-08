@@ -1,5 +1,51 @@
 .form {
-  &__item {
+  &__body {
+    margin-bottom: 40px;
+  }
 
+  &__item {
+    @include mb(15px);
+
+    label {
+      display: block;
+
+      span {
+        display: block;
+        margin-bottom: 5px;
+        color: $accent-color;
+
+        &::first-letter {
+          color: #ef0000;
+        }
+      }
+    }
+
+    input,
+    textarea {
+      display: block;
+      border: 1px solid $accent-color;
+      border-radius: 5px;
+      padding: 15px 20px;
+      width: 100%;
+      box-shadow: none;
+      font: inherit;
+      font-size: 16px;
+      line-height: normal;
+      color: $main-color;
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: none;
+    }
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__btn {
+    width: 100%;
   }
 }

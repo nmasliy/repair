@@ -1,0 +1,116 @@
+.footer {
+  padding: 50px 0;
+  box-shadow: 0 -10px 50px 10px rgba(0, 0, 0, 25%);
+  color: #fff;
+  background: #1a1a18;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__col {
+    max-width: 300px;
+  }
+
+  &__nav {
+    margin-bottom: 20px;
+    font-size: 16px;
+
+    li {
+      @include mb(10px);
+    }
+
+    a {
+      transition: color $transition;
+
+      @include hover {
+        color: $accent-color;
+      }
+    }
+  }
+
+  &__payment {
+    display: flex;
+    align-items: center;
+
+    li {
+      @include mr(20px);
+    }
+  }
+
+  &__logo {
+    img {
+      width: 280px;
+    }
+  }
+
+  &__contacts-caption {
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+
+  &__phone {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding-left: 40px;
+    font-weight: 600;
+    background: url("../img/phone-white-icon.svg") left / 20px no-repeat;
+
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+
+    li {
+      @include mr(20px);
+
+      transition: transform $transition;
+
+      @include hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    &__logo {
+      img {
+        width: 150px;
+      }
+    }
+
+    &__col {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    &__inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__col {
+      @include mb(20px);
+
+      max-width: 100%;
+
+      &:nth-child(2) {
+        order: -1;
+      }
+    }
+
+    &__payment {
+      flex-wrap: wrap;
+    }
+  }
+}

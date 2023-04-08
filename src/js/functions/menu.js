@@ -1,10 +1,10 @@
 (function () {
   const $html = document.querySelector('html');
-  const $menu = document.querySelector('.menu');
+  const $menu = document.querySelector('.menu__inner');
   const $burger = document.querySelector('.header__burger');
   const $close = document?.querySelector('.menu__close');
   const $overlay = document?.querySelector('.overlay');
-  const $menuItems = document?.querySelectorAll('.menu__nav li a');
+  const $menuItems = document?.querySelectorAll('.header__nav li a');
   const TRANSITION_DELAY = 400;
   const MOBILE_MENU_BREAKPOINT = 1024;
 
@@ -26,11 +26,12 @@
 
   function openMenu() {
     $overlay.style.display = 'block';
-    $menu.style.display = 'block';
+    $menu.style.display = 'flex';
 
     $html.classList.add('disable-scroll');
-
+    
     setTimeout(function () {
+      $burger.classList.add('is-active');
       $overlay.classList.add('is-active');
       $menu.classList.add('is-active');
     }, 1);
@@ -39,7 +40,7 @@
   function closeMenu() {
     $overlay.classList.remove('is-active');
     $menu.classList.remove('is-active');
-
+    $burger.classList.remove('is-active');
     $html.classList.remove('disable-scroll');
 
     setTimeout(function () {

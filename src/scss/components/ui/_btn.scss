@@ -5,8 +5,9 @@
   outline: none;
   border: 2px solid transparent;
   border-radius: 20px;
-  padding: 20px 30px;
-  font: inherit;
+  padding: 18px 30px;
+  font-family: "Urbane", sans-serif;
+  font-weight: 500;
   font-size: 24px;
   line-height: normal;
   text-align: center;
@@ -21,6 +22,8 @@
 
   svg {
     margin-right: 10px;
+    width: 25px;
+    height: 25px;
   }
 
   @include hover {
@@ -30,6 +33,113 @@
 
     path {
       fill: $accent-color;
+    }
+  }
+}
+
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 18px 40px;
+  font-family: "Urbane", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: $accent-color;
+  background: #fff;
+  transition: $transition;
+  cursor: pointer;
+
+  @include hover {
+    border-color: #fff;
+    color: #fff;
+    background-color: $main-color;
+  }
+}
+
+.btn--big,
+.btn-white--big {
+  padding: 18px 50px 18px 40px;
+  font-size: 32px;
+
+  svg {
+    margin-right: 30px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.section-link {
+  font-size: 24px;
+  text-decoration: underline;
+  color: $accent-color;
+
+  @include hover {
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .btn,
+  .btn-white {
+    padding: 14px 25px;
+    font-size: 20px;
+
+    svg {
+      width: 20px;
+      height: auto;
+    }
+
+    &--big {
+      padding: 16px 35px;
+      font-size: 26px;
+
+      svg {
+        margin-right: 20px;
+        width: 40px;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .btn,
+  .btn-white {
+    padding: 14px 25px;
+    font-size: 20px;
+
+    svg {
+      width: 20px;
+      height: auto;
+    }
+
+    &--big {
+      padding: 16px 35px;
+      font-size: 26px;
+
+      svg {
+        margin-right: 20px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn,
+  .btn-white {
+    padding: 12px 22px;
+    font-size: 18px;
+
+    svg {
+      width: 18px;
     }
   }
 }

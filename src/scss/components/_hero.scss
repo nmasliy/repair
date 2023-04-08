@@ -54,3 +54,53 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .hero {
+    padding: 50px 0;
+
+    &__list li {
+      font-size: 20px;
+    }
+
+    &__img {
+      width: 50%;
+    }
+
+    &__caption {
+      font-size: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    &__inner {
+      display: block;
+    }
+
+    &__content {
+      margin-right: 0;
+      margin-bottom: 50px;
+    }
+
+    &__list li {
+      padding-left: 35px;
+      font-size: 18px;
+
+      &::before {
+        background-size: 20px;
+      }
+    }
+
+    &__caption {
+      font-size: 24px;
+    }
+
+    &__img {
+      margin: 0 auto;
+      width: auto;
+      text-align: center;
+    }
+  }
+}

@@ -40,6 +40,12 @@
 
     li {
       @include mr(50px);
+
+      transition: $transition;
+
+      @include hover {
+        color: $accent-color;
+      }
     }
   }
 
@@ -52,6 +58,10 @@
     font-size: 20px;
     color: $accent-color;
     background: url("../img/phone-icon.svg") center left no-repeat;
+
+    @include hover {
+      text-decoration: underline;
+    }
   }
 
   &__socials {
@@ -60,10 +70,68 @@
 
     a {
       display: block;
+      transition: transform $transition;
+
+      @include hover {
+        transform: scale(1.05);
+      }
     }
 
     li {
       @include mr(5px);
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 0;
+    min-height: 60px;
+
+    &__logo {
+      display: flex;
+      margin-bottom: 40px;
+
+      img {
+        width: 100px;
+      }
+    }
+
+    &__phone {
+      padding-left: 30px;
+      font-size: 16px;
+      background-size: 18px;
+    }
+
+    &__right {
+      display: block;
+      margin-top: auto;
+      padding-top: 20px;
+    }
+
+    &__socials {
+      margin-top: 20px;
+    }
+
+    &__nav {
+      margin: auto 0;
+
+      ul {
+        display: block;
+        font-size: 18px;
+      }
+
+      li {
+        @include mr(0);
+      }
+
+      a {
+        display: block;
+        padding: 8px 0;
+      }
     }
   }
 }

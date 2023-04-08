@@ -1,11 +1,11 @@
 // base
 :root {
-  --content-width: 1180px;
+  --content-width: 1110px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + var(--container-offset) * 2);
 }
 
-$font-family: "Urbana", sans-serif;
+$font-family: "Urbane", sans-serif;
 $transition: 0.275s ease-in-out;
 $menu-transition: 0.3s ease-in-out;
 

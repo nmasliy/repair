@@ -26,5 +26,20 @@ const reviewsSwiper = new Swiper('.reviews__slider', {
   navigation: {
     prevEl: '.reviews__prev',
     nextEl: '.reviews__next'
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 30
+    },
+    650: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }
   }
 });
