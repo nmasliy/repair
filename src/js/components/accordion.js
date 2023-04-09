@@ -1,3 +1,3 @@
 import { initAccordion } from '../functions/accordion';
 
-// initAccordion('.accordion-trigger', '.accordion-parent');
+initAccordion('.faq__item-head', '.faq__item', true);

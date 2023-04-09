@@ -3,7 +3,7 @@
   --swiper-navigation-color: #fff;
 
   padding: 60px 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 20%) 85.42%, rgba(255, 255, 255, 0%) 135.95%), #1a1a18;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 20%) 85.42%, rgba(255, 255, 255, 0%) 135.95%), $dark-color;
 
   &__title {
     margin-bottom: 30px;
@@ -44,19 +44,18 @@
     height: 50px;
     box-shadow: 0 10px 50px 10px rgba(0, 0, 0, 25%);
     font-weight: 500;
-    background: #1a1a18;
-    transition: background-color $transition, transform $transition;
+    background: $dark-color;
+    transition: background-color $transition;
 
     @include hover {
       background-color: #262626;
-      transform: scale(1.05);
     }
   }
 }
 
 .review {
   border-radius: 15px;
-  padding: 20px;
+  padding: 20px 15px 20px 20px;
   min-height: 200px;
   color: #000;
   background: #fff;
@@ -69,6 +68,7 @@
   }
 
   &__text {
+    margin-top: 10px;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -90,12 +90,39 @@
     font-size: 20px;
   }
 
+  &__subtitle {
+    font-weight: 300;
+    font-size: 16px;
+    color: #000;
+  }
+
   &__rating {
     display: flex;
     align-items: center;
 
     li {
       @include mr(5px);
+    }
+  }
+
+  &__footer {
+    padding-top: 5px;
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    li {
+      @include mr(30px);
+
+      cursor: pointer;
+      user-select: none;
+    }
+
+    img {
+      display: flex;
+      width: 25px;
     }
   }
 }
@@ -108,12 +135,14 @@
   }
 
   .review {
+    padding: 15px;
+
     &__title {
-      font-size: 18px;
+      font-size: 16px;
     }
 
     &__text {
-      font-size: 15px;
+      font-size: 14px;
     }
 
     &__rating {

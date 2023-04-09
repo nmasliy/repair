@@ -1,0 +1,94 @@
+.faq {
+  color: $dark-color;
+
+  &__inner {
+    margin: 0 auto;
+    max-width: 730px;
+  }
+
+  &__list {
+    counter-reset: faq;
+  }
+
+  &__item {
+    @include mb(20px);
+
+    counter-increment: faq;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 25%);
+
+    &.is-active {
+      .faq {
+        &__item-head::after {
+          transform: rotate(180deg);
+        }
+
+        &__item-content {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__item-head {
+    position: relative;
+    z-index: 3;
+    border: 1px solid $accent-color;
+    border-radius: 15px;
+    padding: 20px 60px 20px 20px;
+    font-size: 16px;
+    background: #fff;
+    cursor: pointer;
+    user-select: none;
+
+    &::before {
+      content: counter(faq) ".";
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 17px;
+      top: 15px;
+      width: 30px;
+      height: 30px;
+      background: url("../img/arrow-circle-down-icon.svg") center no-repeat;
+      transition: transform $transition;
+    }
+  }
+
+  &__item-content {
+    display: none;
+    margin-top: -10px;
+    border: 1px solid $accent-color;
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+    padding: 25px 40px 15px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    transition: padding $transition;
+
+    p {
+      @include mb(20px);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .faq {
+    &__item-head {
+      padding: 15px 45px 15px 15px;
+      font-size: 14px;
+
+      &::after {
+        right: 8px;
+      }
+    }
+
+    &__item-content {
+      padding: 25px 15px 15px;
+    }
+  }
+}

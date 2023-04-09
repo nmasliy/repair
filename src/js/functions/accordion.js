@@ -1,4 +1,4 @@
-export function initAccordion(triggerSelector, parentSelector) {
+export function initAccordion(triggerSelector, parentSelector, isToggle) {
   const triggerNodes = document.querySelectorAll(triggerSelector);
 
   if (!triggerNodes.length > 0) return;
@@ -7,7 +7,7 @@ export function initAccordion(triggerSelector, parentSelector) {
     (el) => !el.classList.contains('is-active')
   );
 
-  if (needInit) {
+  if (needInit && !isToggle) {
     triggerNodes[0].parentNode.classList.add('is-active');
   }
 
@@ -16,8 +16,12 @@ export function initAccordion(triggerSelector, parentSelector) {
       const parentNode = el.closest(parentSelector);
       const activeNode = document.querySelector(parentSelector + '.is-active');
 
-      activeNode.classList.remove('is-active');
-      parentNode.classList.add('is-active');
+      if (isToggle) {
+        parentNode.classList.toggle('is-active');
+      } else {
+        activeNode.classList.remove('is-active');
+        parentNode.classList.add('is-active');
+      }
     });
   });
 }

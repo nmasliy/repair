@@ -7,7 +7,7 @@
   width: 100%;
   min-height: 135px;
   box-shadow: 0 10px 50px 10px rgba(0, 0, 0, 25%);
-  background: #1a1a18;
+  background: $dark-color;
 
   &__menu {
     display: flex;
@@ -101,6 +101,8 @@
     }
 
     &__phone {
+      margin-right: 15px;
+      margin-left: auto;
       padding-left: 30px;
       font-size: 16px;
       background-size: 18px;

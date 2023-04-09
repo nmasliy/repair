@@ -43,3 +43,27 @@ const reviewsSwiper = new Swiper('.reviews__slider', {
     }
   }
 });
+
+const articleSwiper = new Swiper('.article-page__slider', {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 30
+    },
+    650: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }
+  }
+});

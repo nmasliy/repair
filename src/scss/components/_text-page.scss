@@ -1,0 +1,60 @@
+.text-page {
+  &__content {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: $dark-color;
+
+    ul {
+      list-style: disc;
+    }
+
+    ol {
+      list-style: decimal;
+    }
+
+    ul,
+    ol {
+      @include mb(20px);
+
+      padding-left: 20px;
+
+      li {
+        @include mb(10px);
+      }
+    }
+
+    p,
+    img,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include mb(20px);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Urbane", sans-serif;
+      font-weight: 500;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .text-page__content {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text-page__content {
+    font-size: 16px;
+  }
+}
