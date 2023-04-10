@@ -3,20 +3,20 @@
     margin-bottom: 40px;
   }
 
+  &__required-symbol {
+    color: #ef0000;
+  }
+
   &__item {
     @include mb(15px);
 
     label {
       display: block;
 
-      span {
+      > span {
         display: block;
         margin-bottom: 5px;
         color: $accent-color;
-
-        &::first-letter {
-          color: #ef0000;
-        }
       }
     }
 

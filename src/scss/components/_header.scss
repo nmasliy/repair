@@ -43,6 +43,10 @@
 
       transition: $transition;
 
+      &.is-active {
+        color: $accent-color;
+      }
+
       @include hover {
         color: $accent-color;
       }
