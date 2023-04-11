@@ -117,10 +117,12 @@
 @media screen and (max-width: 1024px) {
   .lead {
     &__caption {
+      min-width: 140px;
       font-size: 28px;
     }
 
     &__modal-btn {
+      margin-left: 25px;
       font-size: 20px;
     }
 
@@ -141,10 +143,6 @@
         display: block;
         margin: 0 auto;
         max-width: 500px;
-      }
-
-      &-right {
-        justify-content: space-between;
       }
 
       &-left {
@@ -208,6 +206,14 @@
   .lead {
     &__list {
       display: block;
+    }
+
+    &__caption {
+      min-width: auto;
+    }
+
+    &__header-right {
+      justify-content: space-between;
     }
 
     &__item {

@@ -83,32 +83,6 @@
       }
     }
   }
-
-  &__footer-title {
-    margin-bottom: 20px;
-    font-size: 20px;
-    text-align: center;
-  }
-
-  &__slider {
-    .swiper-pagination {
-      position: static;
-      margin-top: 20px;
-
-      .swiper-pagination-bullet {
-        margin: 0 4px;
-        width: 15px;
-        height: 15px;
-        background: #868686;
-        opacity: 1;
-        transition: background-color $transition;
-
-        &.swiper-pagination-bullet-active {
-          background-color: $dark-color;
-        }
-      }
-    }
-  }
 }
 
 .article-aside {

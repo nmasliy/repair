@@ -12,6 +12,15 @@ const partnersSwiper = new Swiper('.partners-slider__inner', {
     delay: 1,
     disableOnInteraction: false
   },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      speed: 3000,
+    },
+    768: {
+      speed: 2000,
+    },
+  }
 });
 
 const repairSwiper = new Swiper('.repair__slider', {
@@ -23,6 +32,7 @@ const reviewsSwiper = new Swiper('.reviews__slider', {
   slidesPerView: 3,
   spaceBetween: 30,
   loop: true,
+  loopedSlides: 6,
   navigation: {
     prevEl: '.reviews__prev',
     nextEl: '.reviews__next'
@@ -44,7 +54,7 @@ const reviewsSwiper = new Swiper('.reviews__slider', {
   }
 });
 
-const articleSwiper = new Swiper('.article-page__slider', {
+const blogSwiper = new Swiper('.blog-block__slider', {
   slidesPerView: 3,
   spaceBetween: 30,
   pagination: {
