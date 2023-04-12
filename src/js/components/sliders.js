@@ -26,6 +26,7 @@ const partnersSwiper = new Swiper('.partners-slider__inner', {
 const repairSwiper = new Swiper('.repair__slider', {
   slidesPerView: 'auto',
   spaceBetween: 30,
+  initialSlide: 4,
 });
 
 const reviewsSwiper = new Swiper('.reviews__slider', {
